@@ -3,6 +3,8 @@ gobay [![Build Status](https://travis-ci.org/gyuho/gobay.png?branch=master)](htt
 
 Package gobay is a small package for sentiment analysis using Bayesian probability.
 
+<a href="http://www.youtube.com/watch?v=dctzCcYt4AM" target="_blank"><img src="http://img.youtube.com/vi/dctzCcYt4AM/0.jpg"></a>
+
 
 Getting Started
 ==========
