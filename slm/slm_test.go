@@ -1,6 +1,9 @@
 package slm
 
-import "testing"
+import (
+	"reflect"
+	"testing"
+)
 
 func Test_MaxIntFK(test *testing.T) {
 	m := map[float64]int{
@@ -34,5 +37,58 @@ func Test_UniqInts(test *testing.T) {
 	s := []int{1, 2, 3, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5}
 	if len(UniqInts(s)) != 5 {
 		test.Errorf("Should return 5 but %v", UniqInts(s))
+	}
+}
+
+func Test_StrToInt(test *testing.T) {
+	if reflect.TypeOf(StrToInt("10")) != reflect.TypeOf(10) {
+		test.Errorf("Should return true but %v", reflect.TypeOf(StrToInt("10")))
+	}
+}
+
+func Test_IsecStrsLC(test *testing.T) {
+	a := []string{"A", "B", "C", "D"}
+	b := []string{"C", "D", "E", "F"}
+	if len(IsecStrsLC(a, b)) != 2 {
+		test.Errorf("Should return 2 but %v", IsecStrsLC(a, b))
+	}
+}
+
+func Test_CheckStr(test *testing.T) {
+	a := []string{"A", "B", "C", "D"}
+	if CheckStr("A", a) != true {
+		test.Errorf("Should return true but %v", CheckStr("A", a))
+	}
+}
+
+func Test_SubStrsLC(test *testing.T) {
+	a := []string{"A", "B", "C", "D"}
+	b := []string{"C", "D", "E", "F"}
+	if len(SubStrsLC(a, b)) != 2 {
+		test.Errorf("Should return 2 but %v", SubStrsLC(a, b))
+	}
+}
+
+func Test_UnionStrsLC(test *testing.T) {
+	a := []string{"A", "B", "C", "D"}
+	b := []string{"C", "D", "E", "F"}
+	if len(UnionStrsLC(a, b)) != 8 {
+		test.Errorf("Should return 8 but %v", UnionStrsLC(a, b))
+	}
+}
+
+func Test_DupStrsLW(test *testing.T) {
+	a := []string{"A", "B", "C", "D"}
+	b := []string{"C", "D", "E", "F"}
+	if len(DupStrsLW(UnionStrsLC(a, b))) != 2 {
+		test.Errorf("Should return 8 but %v", DupStrsLW(UnionStrsLC(a, b)))
+	}
+}
+
+func Test_UniqStrsLW(test *testing.T) {
+	a := []string{"A", "B", "C", "D"}
+	b := []string{"C", "D", "E", "F"}
+	if len(UniqStrsLW(UnionStrsLC(a, b))) != 6 {
+		test.Errorf("Should return 8 but %v", UniqStrsLW(UnionStrsLC(a, b)))
 	}
 }

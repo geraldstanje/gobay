@@ -73,24 +73,24 @@ func Test_NBC_2(test *testing.T) {
 
 Training Data
 ==========
-Training and filter data are to be frequentyly updated, directly from GitHub / Google Docs.
+Training and filter data are to be frequentyly updated, directly on GitHub and Google Docs.
 
 - <a href="https://docs.google.com/spreadsheet/ccc?key=0AvwDSsSZw04HdF95Rzdubi0xdnJSZXVsYU1OTk9hZWc&usp=sharing" target="_blank">train data : Google Docs</a>
 	- sample: amazon.com review, city review models...
 	- range from 1 to 10; 10 is most positive
 	- We can add any category(class) you want; sports, newspaper, ...
 
-- <a href="https://github.com/gyuholee/gobay/blob/master/data/train%20-%20amazon.csv" target="_blank">train - amazon.csv : GitHub</a>
+- <a href="https://github.com/gyuho/gobay/blob/master/data/train%20-%20amazon.csv" target="_blank">train - amazon.csv : GitHub</a>
 
-- <a href="https://github.com/gyuholee/gobay/blob/master/data/train%20-%20city.csv" target="_blank">train - city.csv : GitHub</a>
+- <a href="https://github.com/gyuho/gobay/blob/master/data/train%20-%20city.csv" target="_blank">train - city.csv : GitHub</a>
 
 - <a href="https://docs.google.com/spreadsheet/ccc?key=0AvwDSsSZw04HdHY3OVNLN1pXb0VMOEFhLVZWb0RNRVE&usp=sharing" target="_blank">filter data : Google Docs</a>
 	- feature candidate word selection
 	- signal words
 
-- <a href="https://github.com/gyuholee/gobay/blob/master/data/filter%20-%20exclude.csv" target="_blank">filter - exclude.csv : GitHub</a>
+- <a href="https://github.com/gyuho/gobay/blob/master/data/filter%20-%20exclude.csv" target="_blank">filter - exclude.csv : GitHub</a>
 
-- <a href="https://github.com/gyuholee/gobay/blob/master/data/filter%20-%20include.csv" target="_blank">filter - include.csv : GitHub</a>
+- <a href="https://github.com/gyuho/gobay/blob/master/data/filter%20-%20include.csv" target="_blank">filter - include.csv : GitHub</a>
 
 
 [↑ top](https://github.com/gyuho/gobay#gobay---)
