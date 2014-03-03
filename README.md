@@ -41,8 +41,8 @@ go run [path/filename]
 gobay Package Hierarchy
 ==========
 ```go
+bay/		# Naive Bayesian Classifier
 data/		# Training Data
-prob/		# Probability Calculation
 read/		# Import Training Data
 slm/		# Slice, Map Functions
 ```

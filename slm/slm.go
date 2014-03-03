@@ -1,3 +1,4 @@
+// Package slm performs slice and map operations for goby.
 package slm
 
 import (

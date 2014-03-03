@@ -26,10 +26,22 @@ ExtractOnlyUniqueIntArray
 -> UniqInts
 
 ExtractOnlyUniqueStringArrayLowerCase
--> UniqStrLW
+-> UniqStrsLW
 
 GetDuplicateStringArrayLowerCase
 -> DupStrsLW
+
+ProbByFeatureClass
+-> ProbByFC
+
+ProbByNonFeature
+-> ProbByNF
+
+ProbByFeature
+-> ProbByF
+
+ProbByClass
+-> ProbByC
 
 UnionStringArrayLowerCase
 -> UnionStrsLC
@@ -43,4 +55,56 @@ FindStringArrayLowerCase
 SubtractStringArrayLowerCase
 -> SubStrsLC
 
-read 
+ImportStructFromCSV
+-> GetStruct
+
+ImportIncludeFeatureFromCSV
+-> GetInclFt
+
+ImportExcludeFeatureFromCSV
+-> GetExcFt
+
+ImportCSV
+-> CSV
+
+SampleTrainData
+-> TD
+
+GetMostInformativeFiveFeature
+-> InfTop5Ft
+
+GetInformativeFeatureWord
+-> InfFtWd
+
+MutualInformationByFeature
+-> MutInfByFt
+
+ExtractCandidateFeature
+-> GetCdFt
+
+GetWtByNonFeatureClass
+-> WtByNFC
+
+GetWtByFeature
+-> WtByF
+
+GetTotalWt
+-> TotalWt
+
+GetWtByFeatureClass
+-> WtByFC
+
+GetWtByClass
+-> WtByC
+
+ExtractCandidateClass
+-> GetCdC
+
+JointProbFeatureClass
+-> JtProbFC
+
+GetWtByNonFeature
+-> WtByNF
+
+JointProbNonFeatureClass
+-> JtProbNFC
