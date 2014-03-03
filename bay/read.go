@@ -1,25 +1,27 @@
-package read
+package bay
 
 import (
 	"encoding/csv"
 	"fmt"
 	"io"
 	"os"
+
+	"github.com/gyuho/gobay/slm"
 )
 
 // GetStruct imports data from a csv file and construct the structure.
-func GetStruct(filename string) []SampleTrainData {
+func GetStruct(filename string) []TD {
 	output := CSV(filename)
-	var struct_arr SampleTrainData
-	var result []SampleTrainData
+	var stsli TD
+	var result []TD
 
 	// row traverse
 	// count excluding the header row
 	for i := 1; i < len(output); i++ {
-		struct_arr.class = StrToInt(output[i][0])
-		struct_arr.weight = StrToInt(output[i][0]) * 100
-		struct_arr.text = output[i][1]
-		result = append(result, struct_arr)
+		stsli.Class = slm.StrToInt(output[i][0])
+		stsli.Weight = slm.StrToInt(output[i][0]) * 100
+		stsli.Text = output[i][1]
+		result = append(result, stsli)
 	}
 	return result
 }
@@ -28,14 +30,14 @@ func GetStruct(filename string) []SampleTrainData {
 // Possibly big file, so use strings.Contains method should be faster.
 func GetInclFt(filename string) string {
 	output := CSV(filename)
-	var include_str string
+	var icstr string
 
 	// row traverse
 	// count excluding the header row
 	for i := 1; i < len(output); i++ {
-		include_str += "," + output[i][0]
+		icstr += "," + output[i][0]
 	}
-	return include_str
+	return icstr
 }
 
 // GetExcFt imports "exclude" feature candidate range data from a csv file.

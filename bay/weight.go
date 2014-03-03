@@ -15,7 +15,7 @@ func TotalWt(DATA []TD) int {
 func WtByF(DATA []TD, ftw string) int {
 	total := 0
 	for _, elem := range DATA {
-		if strings.Contains(strings.ToLower(elem.text), strings.ToLower(ftw)) {
+		if strings.Contains(strings.ToLower(elem.Text), strings.ToLower(ftw)) {
 			total += elem.Weight
 		}
 	}
@@ -32,7 +32,7 @@ func WtByF(DATA []TD, ftw string) int {
 func WtByNF(DATA []TD, ftw string) int {
 	total := 0
 	for _, elem := range DATA {
-		if !strings.Contains(strings.ToLower(elem.text), strings.ToLower(ftw)) {
+		if !strings.Contains(strings.ToLower(elem.Text), strings.ToLower(ftw)) {
 			total += elem.Weight
 		}
 	}
@@ -48,7 +48,7 @@ func WtByNF(DATA []TD, ftw string) int {
 func WtByC(DATA []TD, klass int) int {
 	total := 0
 	for _, elem := range DATA {
-		if elem.class == klass {
+		if elem.Class == klass {
 			total += elem.Weight
 		}
 	}
@@ -60,8 +60,8 @@ func WtByC(DATA []TD, klass int) int {
 func WtByFC(DATA []TD, ftw string, klass int) int {
 	total := 0
 	for _, elem := range DATA {
-		if elem.class == klass {
-			if strings.Contains(strings.ToLower(elem.text), strings.ToLower(ftw)) {
+		if elem.Class == klass {
+			if strings.Contains(strings.ToLower(elem.Text), strings.ToLower(ftw)) {
 				total += elem.Weight
 			}
 		}
@@ -79,8 +79,8 @@ func WtByFC(DATA []TD, ftw string, klass int) int {
 func WtByNFC(DATA []TD, ftw string, klass int) int {
 	total := 0
 	for _, elem := range DATA {
-		if elem.class == klass {
-			if !strings.Contains(strings.ToLower(elem.text), strings.ToLower(ftw)) {
+		if elem.Class == klass {
+			if !strings.Contains(strings.ToLower(elem.Text), strings.ToLower(ftw)) {
 				total += elem.Weight
 			}
 		}

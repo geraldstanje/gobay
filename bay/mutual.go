@@ -3,6 +3,8 @@ package bay
 import (
 	"math"
 	"sort"
+
+	"github.com/gyuho/gobay/slm"
 )
 
 // MutInfByFt calculates the mutual information probability to detect mutually informative features.
@@ -30,7 +32,7 @@ func InfTop5Ft(DATA []TD, CLASSES []int, fts []string) []string {
 		mtim[MutInfByFt(DATA, CLASSES, elem)] = elem
 	}
 
-	return GetStringWithFiveMaxFloatKey(mtim)
+	return slm.Top5SFK(mtim)
 }
 
 // Return the most informative n words.

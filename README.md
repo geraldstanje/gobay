@@ -44,7 +44,7 @@ gobay Package Hierarchy
 ```go
 bay/		# Naive Bayesian Classifier
 data/		# Training Data
-read/		# Import Training Data
+example/	# Example Code
 slm/		# Slice, Map Functions
 ```
 [↑ top](https://github.com/gyuho/gobay#gobay---)
@@ -53,7 +53,20 @@ slm/		# Slice, Map Functions
 Example
 ==========
 ```go
-package gobay
+func Test_NBC_2(test *testing.T) {
+	DATA_amazon := bay.GetStruct("../data/train - amazon.csv")
+	include := bay.GetInclFt("../data/filter - include.csv")
+	exclude := bay.GetExcFt("../data/filter - exclude.csv")
+
+	// Totally unfamiliar sentence
+	// (Correct Classification!)
+	// Now this data is trained
+
+	bay.Print(DATA_amazon, include, exclude, "High quality code samples. It must be said: Mark Summerfield is a REALLY good programmer. All of the code in this book gives the impression of being well thought out. The other books had a lot of cargo cult programming, meaning the authors were going through the motions without thinking about what they were doing.")
+
+	// Output:
+	// Positive: High quality code samples. It must be said: Mark Summerfield is a REALLY good programmer. All of the code in this book gives the impression of being well thought out. The other books had a lot of cargo cult programming, meaning the authors were going through the motions without thinking about what they were doing.
+}
 ```
 [↑ top](https://github.com/gyuho/gobay#gobay---)
 

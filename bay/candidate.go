@@ -40,7 +40,7 @@ func GetCdFt(DATA []TD, include string, exclude []string) []string {
 			// during the 1st filter, the words like "a", "of" will not be caught
 			// add more conditions to catch too short words
 			// 2nd filter: no exception: exclude useless words for classification
-			if strings.Contains(include, strings.ToLower(each_word_from_text)) && !slm.CheckStr(exclude, each_word_from_text) {
+			if strings.Contains(include, strings.ToLower(each_word_from_text)) && !slm.CheckStr(each_word_from_text, exclude) {
 				rc = append(rc, strings.ToLower(each_word_from_text))
 			}
 		}

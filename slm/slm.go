@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-// MaxIntFK returns the value of the maximum float key in the map[float64]int.
+// MaxIntFK returns the value with the maximum float key.
 func MaxIntFK(m map[float64]int) int {
 	var keys []float64
 	// traverse map only with keys
@@ -18,9 +18,6 @@ func MaxIntFK(m map[float64]int) int {
 	sort.Float64s(keys)
 	// now the input map m is sorted by the keys
 
-	// optional statement
-	// fmt.Println("The value with the biggest key is"
-	// , m[keys[len(keys)-1]], ", with its key", keys[len(keys)-1])
 	return m[keys[len(keys)-1]]
 }
 
