@@ -1,3 +1,4 @@
+// Package bay implements Naive Bayesian Classifier.
 package bay
 
 import (
@@ -29,6 +30,7 @@ import (
 		And the CLASSES  with biggest probability is the classification
 */
 
+// NBC implements Naive Bayesian Classifier.
 func NBC(DATA []TD, include string, exclude []string, str string) int {
 
 	// This works very well even if I have very small data
