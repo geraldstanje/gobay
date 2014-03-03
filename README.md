@@ -3,7 +3,16 @@ gobay [![Build Status](https://travis-ci.org/gyuho/gobay.png?branch=master)](htt
 
 Package gobay is a small package for sentiment analysis using Bayesian probability.
 
-<a href="http://www.youtube.com/watch?v=dctzCcYt4AM" target="_blank"><img src="http://img.youtube.com/vi/dctzCcYt4AM/0.jpg"></a>
+
+YouTube Clips by me
+==========
+<ul>
+	<li><a href="https://www.youtube.com/watch?v=dctzCcYt4AM&list=PLT6aABhFfintOGKWVWz9qMxC3qZZdHQRD&index=1" target="_blank">Bayesian Classification</li>
+	<li><a href="https://www.youtube.com/watch?v=927YDZH_MLo&list=PLT6aABhFfintOGKWVWz9qMxC3qZZdHQRD" target="_blank">String Similarity, Cosine Similarity, Levenshtein Distance</li>
+	<li><a href="https://www.youtube.com/watch?v=3qHx1VCcobY&list=PLT6aABhFfintOGKWVWz9qMxC3qZZdHQRD" target="_blank">Spell Check</li>
+</ul>
+
+[↑ top](https://github.com/gyuho/gobay#gobay---)
 
 
 Getting Started
@@ -26,6 +35,18 @@ import "github.com/gyuho/gobay"
 // to run, or go install
 go run [path/filename]
 ```
+[↑ top](https://github.com/gyuho/gobay#gobay---)
+
+
+gobay Package Hierarchy
+==========
+```go
+data/		# Training Data
+prob/		# Probability Calculation
+read/		# Import Training Data
+slm/		# Slice, Map Functions
+```
+[↑ top](https://github.com/gyuho/gobay#gobay---)
 
 
 Example
@@ -33,7 +54,35 @@ Example
 ```go
 package gobay
 ```
+[↑ top](https://github.com/gyuho/gobay#gobay---)
+
+
+Training Data
+==========
+Training and filter data are to be frequentyly updated, directly from GitHub / Google Docs.
+
+- <a href="https://docs.google.com/spreadsheet/ccc?key=0AvwDSsSZw04HdF95Rzdubi0xdnJSZXVsYU1OTk9hZWc&usp=sharing" target="_blank">train data : Google Docs</a>
+	- sample: amazon.com review, city review models...
+	- range from 1 to 10; 10 is most positive
+	- We can add any category(class) you want; sports, newspaper, ...
+
+- <a href="https://github.com/gyuholee/gobay/blob/master/data/train%20-%20amazon.csv" target="_blank">train - amazon.csv : GitHub</a>
+
+- <a href="https://github.com/gyuholee/gobay/blob/master/data/train%20-%20city.csv" target="_blank">train - city.csv : GitHub</a>
+
+- <a href="https://docs.google.com/spreadsheet/ccc?key=0AvwDSsSZw04HdHY3OVNLN1pXb0VMOEFhLVZWb0RNRVE&usp=sharing" target="_blank">filter data : Google Docs</a>
+	- feature candidate word selection
+	- signal words
+
+- <a href="https://github.com/gyuholee/gobay/blob/master/data/filter%20-%20exclude.csv" target="_blank">filter - exclude.csv : GitHub</a>
+
+- <a href="https://github.com/gyuholee/gobay/blob/master/data/filter%20-%20include.csv" target="_blank">filter - include.csv : GitHub</a>
+
+
+[↑ top](https://github.com/gyuho/gobay#gobay---)
 
 To-Do-List
 ==========
-- ...
+- Update Bayesian algorithms for some exceptional cases
+
+[↑ top](https://github.com/gyuho/gobay#gobay---)
