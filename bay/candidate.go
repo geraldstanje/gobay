@@ -17,7 +17,8 @@ func GetCdC(DATA []TD) []int {
 	return slm.UniqInts(candidate)
 }
 
-// GetCdFt extracts the candidate feature words from the training data and feature range data.
+// GetCdFt extracts the candidate feature words from the training
+// data and feature range data.
 // Previous step to mutual information filtering.
 // For example, retrieve the useful words: simple, easy, like, hate, etc.
 // All raw data are already processed before calling this function.
@@ -30,18 +31,18 @@ func GetCdFt(DATA []TD, include string, exclude []string) []string {
 
 	for _, each_text := range DATA {
 		// for each text, it extracts only words without punctuation
-		temp := st.GetWords(strings.ToLower(each_text.Text))
+		words := st.GetWords(strings.ToLower(each_text.Text))
 
 		// for each word of current text array elements,
 		// test if it is a proper, informative word
-		for _, each_word_from_text := range temp {
+		for _, wd := range words {
 
 			// 1st filter: select relatively useful and informative words(signal words)
 			// during the 1st filter, the words like "a", "of" will not be caught
 			// add more conditions to catch too short words
 			// 2nd filter: no exception: exclude useless words for classification
-			if strings.Contains(include, strings.ToLower(each_word_from_text)) && !slm.CheckStr(each_word_from_text, exclude) {
-				rc = append(rc, strings.ToLower(each_word_from_text))
+			if strings.Contains(include, strings.ToLower(wd)) && !slm.CheckStr(wd, exclude) {
+				rc = append(rc, strings.ToLower(wd))
 			}
 		}
 	}

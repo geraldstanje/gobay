@@ -7,8 +7,10 @@ import (
 	"github.com/gyuho/gobay/slm"
 )
 
-// MutInfByFt calculates the mutual information probability to detect mutually informative features.
-// For example, it returns higher probability for "like" rather than "the."
+// MutInfByFt calculates the mutual information probability
+// to detect mutually informative features.
+// For example, it returns higher probability for "like"
+// rather than "the."
 func MutInfByFt(DATA []TD, CLASSES []int, ftw string) float64 {
 	result := 0.0
 	for _, elem := range CLASSES {
@@ -21,8 +23,6 @@ func MutInfByFt(DATA []TD, CLASSES []int, ftw string) float64 {
 	}
 	return result
 }
-
-// later shorten with interface
 
 // InfTop5Ft, from mutual information, extracts the most informative features.
 func InfTop5Ft(DATA []TD, CLASSES []int, fts []string) []string {
