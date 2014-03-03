@@ -1,8 +1,7 @@
 gobay [![Build Status](https://travis-ci.org/gyuho/gobay.png?branch=master)](https://travis-ci.org/gyuho/gobay) [![GoDoc](https://godoc.org/github.com/gyuho/gobay?status.png)](http://godoc.org/github.com/gyuho/gobay) [![Project Stats](http://www.ohloh.net/p/714281/widgets/project_thin_badge.gif)](http://www.ohloh.net/p/714281)
 ==========
 
-Package gobay implements Naive Bayesian Classifier for sentiment analysis.
-
+Package gobay implements Naive Bayesian Classifier for sentiment analysis. (Wikipedia: <a href="http://en.wikipedia.org/wiki/Naive_Bayes_classifier" target="_blank">Naive Bayesian Classifier</a>)
 
 YouTube Clips by me
 ==========
@@ -45,7 +44,7 @@ gobay Package Hierarchy
 bay/		# Naive Bayesian Classifier
 data/		# Training Data
 example/	# Example Code
-slm/		# Slice, Map Functions
+slm/		# Slice, Map Operations
 ```
 [↑ top](https://github.com/gyuho/gobay#gobay---)
 
