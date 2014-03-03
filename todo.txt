@@ -9,3 +9,38 @@ DeletePunctuationWithSpace
 
 SplitWordWithoutPunctuation
 -> GetWords
+
+SuffixEnglish
+-> Stem
+
+SentenceEnglish
+-> StemText
+
+GetIntWithMaxFloatKey
+-> MaxIntFK
+
+GetStringWithFiveMaxFloatKey
+-> Top5SFK
+
+ExtractOnlyUniqueIntArray
+-> UniqInts
+
+ExtractOnlyUniqueStringArrayLowerCase
+-> UniqStrLW
+
+GetDuplicateStringArrayLowerCase
+-> DupStrsLW
+
+UnionStringArrayLowerCase
+-> UnionStrsLC
+
+IntersectionStringArrayLowerCase
+-> IsecStrsLC
+
+FindStringArrayLowerCase
+-> CheckStr
+
+SubtractStringArrayLowerCase
+-> SubStrsLC
+
+read 
