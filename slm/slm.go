@@ -52,10 +52,10 @@ func UniqInts(slice []int) []int {
 	result := []int{}
 
 	// traverse the input array and map each to boolean value
-	for _, elem := range slice {
-		if _, checked := model[elem]; !checked {
-			result = append(result, elem)
-			model[elem] = true
+	for _, v := range slice {
+		if _, checked := model[v]; !checked {
+			result = append(result, v)
+			model[v] = true
 		}
 	}
 	return result
@@ -81,8 +81,8 @@ func IsecStrsLC(sl1 []string, sl2 []string) []string {
 // CheckStr checks in lowercse, if the string
 // exists in the slice.
 func CheckStr(str string, slice []string) bool {
-	for _, elem := range slice {
-		if strings.ToLower(str) == strings.ToLower(elem) {
+	for _, v := range slice {
+		if strings.ToLower(str) == strings.ToLower(v) {
 			return true
 		}
 	}
@@ -94,9 +94,9 @@ func SubStrsLC(a, b []string) []string {
 	result := []string{}
 	intersect := IsecStrsLC(a, b)
 
-	for _, elem := range a {
-		if !CheckStr(elem, intersect) {
-			result = append(result, elem)
+	for _, v := range a {
+		if !CheckStr(v, intersect) {
+			result = append(result, v)
 		}
 	}
 	return result
@@ -107,12 +107,12 @@ func SubStrsLC(a, b []string) []string {
 func UnionStrsLC(sl1 []string, sl2 []string) []string {
 	// convert all elements to lower case
 	ns1 := []string{}
-	for _, elem := range sl1 {
-		ns1 = append(ns1, strings.ToLower(elem))
+	for _, v := range sl1 {
+		ns1 = append(ns1, strings.ToLower(v))
 	}
 	ns2 := []string{}
-	for _, elem := range sl2 {
-		ns2 = append(ns2, strings.ToLower(elem))
+	for _, v := range sl2 {
+		ns2 = append(ns2, strings.ToLower(v))
 	}
 
 	var total []string
@@ -127,17 +127,17 @@ func UnionStrsLC(sl1 []string, sl2 []string) []string {
 func DupStrsLW(slice []string) []string {
 	// convert all elements to lower case
 	ns := []string{}
-	for _, elem := range slice {
-		ns = append(ns, strings.ToLower(elem))
+	for _, v := range slice {
+		ns = append(ns, strings.ToLower(v))
 	}
 
 	freq := make(map[string]int)
 	result := []string{}
 
-	for _, elem := range ns {
-		freq[elem] += 1
-		if freq[elem] >= 2 {
-			result = append(result, elem)
+	for _, v := range ns {
+		freq[v] += 1
+		if freq[v] >= 2 {
+			result = append(result, v)
 		}
 	}
 	return result
@@ -149,8 +149,8 @@ func DupStrsLW(slice []string) []string {
 func UniqStrsLW(slice []string) []string {
 	// convert all elements to lower case
 	ns := []string{}
-	for _, elem := range slice {
-		ns = append(ns, strings.ToLower(elem))
+	for _, v := range slice {
+		ns = append(ns, strings.ToLower(v))
 	}
 
 	// var model map[string]bool
@@ -162,10 +162,10 @@ func UniqStrsLW(slice []string) []string {
 	result := []string{}
 
 	// traverse the input array and map each to boolean value
-	for _, elem := range ns {
-		if _, checked := model[elem]; !checked {
-			result = append(result, elem)
-			model[elem] = true
+	for _, v := range ns {
+		if _, checked := model[v]; !checked {
+			result = append(result, v)
+			model[v] = true
 		}
 	}
 	return result

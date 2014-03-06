@@ -38,7 +38,7 @@ go run [path/filename]
 [↑ top](https://github.com/gyuho/gobay#gobay---)
 
 
-gobay Package Hierarchy
+Package Hierarchy
 ==========
 ```go
 bay/		# Naive Bayesian Classifier
