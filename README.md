@@ -32,8 +32,10 @@ import "github.com/gyuho/gobay"
 // to call the function, in the code
 [package_name].[function]
 
-// to run, or go install
-go run [path/filename]
+// to execute
+go install
+// or
+go build
 ```
 [↑ top](https://github.com/gyuho/gobay#gobay---)
 
