@@ -1,4 +1,4 @@
-gobay [![Build Status](https://travis-ci.org/gyuho/gobay.png?branch=master)](https://travis-ci.org/gyuho/gobay) [![GoDoc](https://godoc.org/github.com/gyuho/gobay?status.png)](http://godoc.org/github.com/gyuho/gobay) [![Project Stats](http://www.ohloh.net/p/714471/widgets/project_thin_badge.gif)](http://www.ohloh.net/p/714471)
+gobay [![Build Status](https://travis-ci.org/gyuho/gobay.svg?branch=master)](https://travis-ci.org/gyuho/gobay) [![GoDoc](https://godoc.org/github.com/gyuho/gobay?status.png)](http://godoc.org/github.com/gyuho/gobay) [![Project Stats](http://www.ohloh.net/p/714471/widgets/project_thin_badge.gif)](http://www.ohloh.net/p/714471)
 ==========
 
 Package gobay implements Naive Bayesian Classifier for sentiment analysis. (<a href="http://en.wikipedia.org/wiki/Naive_Bayes_classifier" target="_blank">Naive Bayesian Classifier</a> - Wikipedia)
